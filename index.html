@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>davisouza.dev</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="carinha.png" />
+    <!-- Fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inclusive+Sans:ital,wght@0,300..700;1,300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Pinyon+Script&family=Space+Grotesk:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Inclusive+Sans:ital,wght@0,300..700;1,300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Pinyon+Script&family=Space+Grotesk:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- /Fontes -->
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div id="cursor-glow"></div>
+    <img class="musga" src="musga.png" alt="" />
+    <img class="floaty player-deco" src="player.png" alt="" />
+    <img class="floaty bola-deco" src="bola.png" alt="" />
+    <img class="floaty bola2-deco" src="bola2.png" alt="" />
+    <img class="floaty naosei-deco" src="naosei.png" alt="" />
+    <header>
+      <menu>
+        <li>
+          <div id="logo-group">
+            <label id="theme-toggle">
+              <input type="checkbox" id="light" />
+              <span id="toggle-icon">
+                <svg
+                  class="icon-moon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 640 640"
+                >
+                  <path
+                    fill="rgb(255, 255, 255)"
+                    d="M320 64C178.6 64 64 178.6 64 320C64 461.4 178.6 576 320 576C388.8 576 451.3 548.8 497.3 504.6C504.6 497.6 506.7 486.7 502.6 477.5C498.5 468.3 488.9 462.6 478.8 463.4C473.9 463.8 469 464 464 464C362.4 464 280 381.6 280 280C280 207.9 321.5 145.4 382.1 115.2C391.2 110.7 396.4 100.9 395.2 90.8C394 80.7 386.6 72.5 376.7 70.3C358.4 66.2 339.4 64 320 64z"
+                  />
+                </svg>
+
+                <svg
+                  class="icon-sun"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 640 640"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M320 32C328 32 335.4 36 339.9 42.6L398.7 130L502.1 109.8C509.9 108.3 518 110.7 523.7 116.4C529.4 122.1 531.8 130.2 530.3 138L510 241.3L597.4 300.1C604 304.5 608 312 608 320C608 328 604 335.4 597.4 339.9L510 398.7L530.2 502C531.7 509.8 529.3 517.9 523.6 523.6C517.9 529.3 509.8 531.7 502 530.2L398.7 510L339.9 597.4C335.4 604 328 608 320 608C312 608 304.6 604 300.1 597.4L241.3 510L137.9 530.2C130.1 531.7 122 529.3 116.3 523.6C110.6 517.9 108.2 509.8 109.7 502L130 398.7L42.6 339.9C36 335.4 32 328 32 320C32 312 36 304.6 42.6 300.1L130 241.3L109.8 137.9C108.3 130.1 110.7 122 116.4 116.3C122.1 110.6 130.2 108.2 138 109.7L241.3 129.9L300.1 42.5L301.9 40.2C306.4 35 313 32 320 32zM272.2 170C266.8 178 257.2 182 247.7 180.2L163.7 163.8L180.1 247.8C181.9 257.3 177.9 266.9 169.9 272.3L99 320L170 367.8C178 373.2 182 382.8 180.2 392.3L163.8 476.3L247.8 459.9L251.3 459.5C259.6 459.1 267.6 463.1 272.3 470.1L320.1 541.1L367.9 470.1L370.1 467.3C375.7 461.2 384.1 458.3 392.4 460L476.4 476.4L460 392.4C458.2 382.9 462.2 373.3 470.2 367.9L541.2 320.1L470.2 272.3C462.2 266.9 458.2 257.3 460 247.8L476.4 163.8L392.4 180.2C382.9 182 373.3 178 367.9 170L320.1 99L272.3 170zM320 440C253.7 440 200 386.3 200 320C200 253.7 253.7 200 320 200C386.3 200 440 253.7 440 320C440 386.3 386.3 440 320 440zM320 248C280.2 248 248 280.2 248 320C248 359.8 280.2 392 320 392C359.8 392 392 359.8 392 320C392 280.2 359.8 248 320 248z"
+                  />
+                </svg>
+              </span>
+            </label>
+            <div id="logo">
+              <img src="carinha.png" />
+              <p>davisouza.dev</p>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div id="opcao">
+            <a href="#sobre">Sobre</a>
+            <a href="#projetos">Projetos</a>
+            <a href="#contato">Contato</a>
+          </div>
+        </li>
+        <li>
+          <div id="logo"><a href="#">Meu Currículo</a></div>
+        </li>
+      </menu>
+    </header>
+    <main>
+      <section id="hero">
+        <h1>DAVI QUEM?</h1>
+        <div id="badge">
+          <span id="badge-dot"></span>
+          <p>Imagine o que quiser, faça como quiser</p>
+        </div>
+        <div id="text">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+        </div>
+        <div id="sobre">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+            ea commodo consequat. Duis aute irure dolor in reprehenderit in
+            voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+            officia deserunt mollit anim id est laborum.
+          </p>
+          <img src="eu.jpg" />
+        </div>
+      </section>
+      <section id="skills">
+        <div class="skills-carousel">
+          <button
+            class="skills-arrow skills-arrow-prev"
+            id="skills-prev"
+            aria-label="Slide anterior"
+          >
+            &#10094;
+          </button>
+          <div class="skills-viewport">
+            <div class="skills-track" id="skills-track">
+              <div class="skills-slide">
+                <div class="skills-title">
+                  <h2>Hard Skills</h2>
+                </div>
+                <div class="grid-skills">
+                  <div class="bloco">
+                    <div class="bloco-bar">
+                      <div class="bloco-bar-fill" style="width: 95%"></div>
+                    </div>
+                    <div class="bloco-body">
+                      <div class="bloco-icon">&lt;&gt;</div>
+                      <div class="bloco-info">
+                        <h3>HTML5</h3>
+                        <span>MARKUP</span>
+                      </div>
+                    </div>
+                    <div class="bloco-dots">
+                      <span class="dot filled"></span
+                      ><span class="dot filled"></span
+                      ><span class="dot filled"></span>
+                    </div>
+                  </div>
+                  <div class="bloco">
+                    <div class="bloco-bar">
+                      <div class="bloco-bar-fill" style="width: 90%"></div>
+                    </div>
+                    <div class="bloco-body">
+                      <div class="bloco-icon">#</div>
+                      <div class="bloco-info">
+                        <h3>CSS3</h3>
+                        <span>STYLE</span>
+                      </div>
+                    </div>
+                    <div class="bloco-dots">
+                      <span class="dot filled"></span
+                      ><span class="dot filled"></span
+                      ><span class="dot filled"></span>
+                    </div>
+                  </div>
+                  <div class="bloco">
+                    <div class="bloco-bar">
+                      <div class="bloco-bar-fill" style="width: 55%"></div>
+                    </div>
+                    <div class="bloco-body">
+                      <div class="bloco-icon">JS</div>
+                      <div class="bloco-info">
+                        <h3>JavaScript</h3>
+                        <span>CODE</span>
+                      </div>
+                    </div>
+                    <div class="bloco-dots">
+                      <span class="dot filled"></span
+                      ><span class="dot filled"></span><span class="dot"></span>
+                    </div>
+                  </div>
+                  <div class="bloco">
+                    <div class="bloco-bar">
+                      <div class="bloco-bar-fill" style="width: 60%"></div>
+                    </div>
+                    <div class="bloco-body">
+                      <div class="bloco-icon">C#</div>
+                      <div class="bloco-info">
+                        <h3>C#</h3>
+                        <span>CSHARP</span>
+                      </div>
+                    </div>
+                    <div class="bloco-dots">
+                      <span class="dot filled"></span
+                      ><span class="dot filled"></span><span class="dot"></span>
+                    </div>
+                  </div>
+                  <div class="bloco">
+                    <div class="bloco-bar">
+                      <div class="bloco-bar-fill" style="width: 70%"></div>
+                    </div>
+                    <div class="bloco-body">
+                      <div class="bloco-icon">SQL</div>
+                      <div class="bloco-info">
+                        <h3>MySQL</h3>
+                        <span>DATABASE</span>
+                      </div>
+                    </div>
+                    <div class="bloco-dots">
+                      <span class="dot filled"></span
+                      ><span class="dot filled"></span><span class="dot"></span>
+                    </div>
+                  </div>
+                  <div class="bloco">
+                    <div class="bloco-bar">
+                      <div class="bloco-bar-fill" style="width: 85%"></div>
+                    </div>
+                    <div class="bloco-body">
+                      <div class="bloco-icon">GIT</div>
+                      <div class="bloco-info">
+                        <h3>Git</h3>
+                        <span>GIT</span>
+                      </div>
+                    </div>
+                    <div class="bloco-dots">
+                      <span class="dot filled"></span
+                      ><span class="dot filled"></span><span class="dot"></span>
+                    </div>
+                  </div>
+                  <div class="bloco">
+                    <div class="bloco-bar">
+                      <div class="bloco-bar-fill" style="width: 80%"></div>
+                    </div>
+                    <div class="bloco-body">
+                      <div class="bloco-icon">B</div>
+                      <div class="bloco-info">
+                        <h3>Bootstrap</h3>
+                        <span>BOOTSTRAP</span>
+                      </div>
+                    </div>
+                    <div class="bloco-dots">
+                      <span class="dot filled"></span
+                      ><span class="dot filled"></span><span class="dot"></span>
+                    </div>
+                  </div>
+                  <div class="bloco">
+                    <div class="bloco-bar">
+                      <div class="bloco-bar-fill" style="width: 80%"></div>
+                    </div>
+                    <div class="bloco-body">
+                      <div class="bloco-icon">&#10022;</div>
+                      <div class="bloco-info">
+                        <h3>UI/UX</h3>
+                        <span>DESIGN</span>
+                      </div>
+                    </div>
+                    <div class="bloco-dots">
+                      <span class="dot filled"></span><span class="dot"></span
+                      ><span class="dot"></span>
+                    </div>
+                  </div>
+                  <div class="bloco">
+                    <div class="bloco-bar">
+                      <div class="bloco-bar-fill" style="width: 75%"></div>
+                    </div>
+                    <div class="bloco-body">
+                      <div class="bloco-icon">F</div>
+                      <div class="bloco-info">
+                        <h3>Figma</h3>
+                        <span>FIGMA</span>
+                      </div>
+                    </div>
+                    <div class="bloco-dots">
+                      <span class="dot filled"></span
+                      ><span class="dot filled"></span><span class="dot"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="skills-slide">
+                <div class="skills-title">
+                  <h2>Soft Skills</h2>
+                </div>
+                <div class="grid-skills">
+                  <div class="bloco">
+                    <div class="bloco-bar">
+                      <div class="bloco-bar-fill" style="width: 100%"></div>
+                    </div>
+                    <div class="bloco-body">
+                      <div class="bloco-icon">TE</div>
+                      <div class="bloco-info">
+                        <h3>Trabalho</h3>
+                        <span>EM EQUIPE</span>
+                      </div>
+                    </div>
+                    <div class="bloco-dots">
+                      <span class="dot filled"></span
+                      ><span class="dot filled"></span
+                      ><span class="dot filled"></span>
+                    </div>
+                  </div>
+                  <div class="bloco">
+                    <div class="bloco-bar">
+                      <div class="bloco-bar-fill" style="width: 95%"></div>
+                    </div>
+                    <div class="bloco-body">
+                      <div class="bloco-icon">In</div>
+                      <div class="bloco-info">
+                        <h3>Inglês</h3>
+                        <span>AVANÇADO</span>
+                      </div>
+                    </div>
+                    <div class="bloco-dots">
+                      <span class="dot filled"></span
+                      ><span class="dot filled"></span
+                      ><span class="dot filled"></span>
+                    </div>
+                  </div>
+                  <div class="bloco">
+                    <div class="bloco-bar">
+                      <div class="bloco-bar-fill" style="width: 100%"></div>
+                    </div>
+                    <div class="bloco-body">
+                      <div class="bloco-icon">P</div>
+                      <div class="bloco-info">
+                        <h3>Proativo</h3>
+                        <span>EM ATIVIDADES</span>
+                      </div>
+                    </div>
+                    <div class="bloco-dots">
+                      <span class="dot filled"></span
+                      ><span class="dot filled"></span><span class="dot"></span>
+                    </div>
+                  </div>
+                  <div class="bloco">
+                    <div class="bloco-bar">
+                      <div class="bloco-bar-fill" style="width: 80%"></div>
+                    </div>
+                    <div class="bloco-body">
+                      <div class="bloco-icon">D</div>
+                      <div class="bloco-info">
+                        <h3>Criatividade</h3>
+                        <span>DESIGN</span>
+                      </div>
+                    </div>
+                    <div class="bloco-dots">
+                      <span class="dot filled"></span
+                      ><span class="dot filled"></span><span class="dot"></span>
+                    </div>
+                  </div>
+                  <div class="bloco">
+                    <div class="bloco-bar">
+                      <div class="bloco-bar-fill" style="width: 85%"></div>
+                    </div>
+                    <div class="bloco-body">
+                      <div class="bloco-icon">PC</div>
+                      <div class="bloco-info">
+                        <h3>Manutenção</h3>
+                        <span>HARDWARE</span>
+                      </div>
+                    </div>
+                    <div class="bloco-dots">
+                      <span class="dot filled"></span><span class="dot"></span
+                      ><span class="dot"></span>
+                    </div>
+                  </div>
+                  <div class="bloco">
+                    <div class="bloco-bar">
+                      <div class="bloco-bar-fill" style="width: 90%"></div>
+                    </div>
+                    <div class="bloco-body">
+                      <div class="bloco-icon">F</div>
+                      <div class="bloco-info">
+                        <h3>Formatação</h3>
+                        <span>CONFIGURAÇÃO</span>
+                      </div>
+                    </div>
+                    <div class="bloco-dots">
+                      <span class="dot filled"></span
+                      ><span class="dot filled"></span><span class="dot"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button
+            class="skills-arrow skills-arrow-next"
+            id="skills-next"
+            aria-label="Próximo slide"
+          >
+            &#10095;
+          </button>
+        </div>
+        <div class="skills-dots" id="skills-dots">
+          <span class="skills-dot active" data-slide="0"></span>
+          <span class="skills-dot" data-slide="1"></span>
+        </div>
+      </section>
+      <section id="projetos">
+        <div class="projetos-title">
+          <h2>Projetos</h2>
+        </div>
+        <div id="grid-projetos">
+          <div class="projeto">
+            <img class="projeto-img" src="imagem-fds.png" />
+            <div class="projeto-info">
+              <p>
+                Sonho Meu — loja virtual para uma escola de música e loja de
+                instrumentos musicais. Catálogo organizado por categoria
+                (violões, violinos, órgãos e mais), páginas de produto,
+                carrinho de compras e seção de marcas parceiras. Meu primeiro
+                projeto freelance pago, feito para um cliente real.
+              </p>
+              <a class="projeto-botao" href="https://davisouza6.github.io/sonhomeu/" target="_blank" rel="noopener">Ver site</a>
+            </div>
+          </div>
+          <div class="projeto">
+            <img class="projeto-img" src="imagem-fds.png" />
+            <div class="projeto-info">
+              <p>
+                sicness — e-commerce de streetwear focado em moletons e peças
+                de skate. Conta com vitrine de produtos, páginas de pedidos,
+                área do usuário, busca e central de atendimento (SAC),
+                simulando uma loja online completa.
+              </p>
+              <a class="projeto-botao" href="https://davisouza6.github.io/sicness/" target="_blank" rel="noopener">Ver site</a>
+            </div>
+          </div>
+          <div class="projeto">
+            <img class="projeto-img" src="imagem-fds.png" />
+            <div class="projeto-info">
+              <p>
+                Louie Smith — página de portfólio para um fotógrafo, com
+                galeria de fotos, seção sobre, serviços, blog e formulário de
+                contato. Projeto focado em layout visual limpo e navegação
+                simples entre as seções.
+              </p>
+              <a class="projeto-botao" href="https://davisouza6.github.io/louie_smith/" target="_blank" rel="noopener">Ver site</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="contato-title">
+        <h2>Contato</h2>
+      </div>
+      <section id="tudo-contato">
+        <section id="contato">
+          <form action="https://api.web3forms.com/submit" method="POST">
+            <input
+              type="hidden"
+              name="access_key"
+              value="53506d80-da59-4e54-b2e8-5a6873074f1a"
+            />
+            <div class="campo-contato">
+              <input type="text" name="name" placeholder="Nome" required />
+              <input type="email" name="email" placeholder="Email" required />
+            </div>
+            <textarea name="message" placeholder="Mensagem" required></textarea>
+            <button type="submit">Enviar</button>
+          </form>
+        </section>
+        <section id="texto-contato">
+          <div class="letras">
+            <h3><span>//</span> Entre em contato</h3>
+            <p>
+              Insira suas informações no formulário para entrar em contato
+              comigo por email, você terá sua resposta assim que possível. Se
+              preferir, pode entrar em contato por alguma das redes sociais
+              abaixo.
+            </p>
+            <ul class="redes">
+              <li>
+                <a href="#"><span class="rede-icone"></span>Rede Social</a>
+              </li>
+              <li>
+                <a href="#"><span class="rede-icone"></span>Rede Social</a>
+              </li>
+              <li>
+                <a href="#"><span class="rede-icone"></span>Rede Social</a>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </section>
+    </main>
+    <footer>
+      <section id="logo-grupo">
+        <div id="logo-group">
+          <div id="logo-rodape">
+            <img src="carinha.png" />
+            <p>davisouza.dev</p>
+          </div>
+        </div>
+        <div id="info">
+          <ul class="lista-maneira">
+            <li>+55 31 9 9617-0053</li>
+            <li>
+              <a href="mailto:contato.davisouza6@gmail.com"
+                >contato.davisouza6@gmail.com</a
+              >
+            </li>
+            <li><a href="https://github.com/davisouza6">@davisouza6</a></li>
+          </ul>
+        </div>
+      </section>
+    </footer>
+    <img class="relogio" src="relogio.png" />
+  </body>
+</html>
